@@ -1,5 +1,5 @@
 var supertest = require('supertest');
-const baseUrl = supertest('https://dummy.restapiexample.com/api/v1');
+const baseUrl = supertest('https://api.restful-api.dev');
 const prodBaseUrl = supertest('https://api.instagram.com');
 
 exports.callApiGetRequest = async (apiEndPoint) => {
@@ -12,7 +12,6 @@ exports.callApiPostRequest = async (apiEndPoint, requestBody) => {
     .send(requestBody);
   return response;
 }
-
 
 exports.callApiGetRequestWithParams = async (apiEndPoint, queryParamObj, region, language, userType, callingUser, token, userAgent) => {
   const headerCopy = {
@@ -36,4 +35,3 @@ exports.callApiGetRequestWithParams = async (apiEndPoint, queryParamObj, region,
     .set("authorization", jwtToken);
   return response;
 }
-  

@@ -5,7 +5,7 @@ const apiEndPoint = require("../common/apiEndPoints");
 
 describe('API Test for GET API', () => {
   it('should return status 200 for a GET request', async () => {
-    const response = await appRequests.callApiGetRequest(apiEndPoint.getEmployee);
+    const response = await appRequests.callApiGetRequest(apiEndPoint.getObject);
     expect(response.status).to.equal(200, "Wrong response code");
   });
 

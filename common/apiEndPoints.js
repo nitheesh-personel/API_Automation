@@ -1,5 +1,5 @@
 module.exports = {
-    getEmployee: "/employees",
-    getemployeeID: "/employee/[id]",
-    postEmployee: "/create"
+    getObject: "/objects",
+    getObjectID: "/objects/[id]",
+    postEmployee: "/objects"
 }
