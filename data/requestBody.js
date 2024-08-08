@@ -14,5 +14,15 @@ module.exports = {
            "CPU model": "Intel Core i9",
            "Hard disk size": "2 TB"
         }
+      },
+    requestBody3: {
+      "name": "Updated Model",
+      "data": {
+         "year": 2019,
+         "price": 2049.99,
+         "CPU model": "Intel Core i9",
+         "Hard disk size": "1 TB",
+         "color": "silver"
       }
+    }
 }

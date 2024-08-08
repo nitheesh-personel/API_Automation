@@ -4,7 +4,7 @@ const appRequests = require("../common/apiRequestMethods");
 const data = require("../data/requestBody");
 const apiEndPoint = require("../common/apiEndPoints");
 
-
+//POST request with request body parameters -raw
 describe('API Test for POST API', () => {
   
   //below example without data file separation
@@ -15,14 +15,12 @@ describe('API Test for POST API', () => {
   
   //below examples with data file separation
   it('should return status 200 for a POST request test2', async () => {
-    const response = await appRequests.callApiPostRequest(apiEndPoint.postEmployee,data.requestBody1);
+    const response = await appRequests.callApiPostRequest(apiEndPoint.postObject,data.requestBody1);
     expect(response.status).to.equal(200, "Wrong response code");
   });
 
   it('should return status 200 for a POST request test3', async () => {
-    const response = await appRequests.callApiPostRequest(apiEndPoint.postEmployee,data.requestBody2);
+    const response = await appRequests.callApiPostRequest(apiEndPoint.postObject,data.requestBody2);
     expect(response.status).to.equal(200, "Wrong response code");
   });
-
-  // Add more test cases as needed
 });

@@ -1,5 +1,6 @@
 module.exports = {
     getObject: "/objects",
     getObjectID: "/objects/[id]",
-    postEmployee: "/objects"
+    postObject: "/objects",
+    changeObject: "/objects/[id]"
 }

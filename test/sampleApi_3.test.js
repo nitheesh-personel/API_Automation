@@ -3,6 +3,7 @@ const expect = chai.expect;
 const appRequests = require("../common/apiRequestMethods");
 const apiEndpoint = require("../common/apiEndPoints");
 
+//GET request with pah parameter
 describe('API Test for GET API with ID', () => {
 
   var response;  //IF WE NEED response in all the IT blocks, define variable here.
@@ -14,15 +15,11 @@ describe('API Test for GET API with ID', () => {
   });
 
   //response body Assertions examples below
-
   it('should verify accurate ID', async () => {
     console.log(response.body);  //for checking the response body structure and defining
     expect(response.body.id).to.equal('7', "Wrong ID");
   });
-
   it('should verify accurate year', async () => {
     expect(response.body.data.year).to.equal(2019, "Wrong year");
   });
-
-  // Add more test cases as needed
 });
